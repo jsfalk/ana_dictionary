@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Ancient North Arabian Dictionary</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="search.js"></script>
+
+		<style type="text/css">
+			table,th,td
+			{
+			border:1px solid black;
+			}
+			th,td
+			{
+			padding:5px;
+			}
+			table.special
+			{
+			float:left;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h3>Search Dictionary</h3>
+		
+		<p id="show_help">Click here for help with special characters</p>
+		<p id="hide_help">Click here to hide the instructions</p>
+		
+		<div id ="help">
+			<p>
+				To write special characters, type the combinations listed in the table below:
+			</p>
+			<table class="special">
+				<thead>
+					<tr>
+						<th>Letter</th>
+						<th>Combination</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>&#x02be;</td>
+						<td>'</td>
+					</tr>
+					<tr>
+						<td>&#x1e6f;</td>
+						<td>t_</td>
+					</tr>
+					<tr>
+						<td>&#x1e25;</td>
+						<td>h.</td>
+					</tr>
+					<tr>
+						<td>&#x1e2b;</td>
+						<td>h_</td>
+					</tr>
+					<tr>
+						<td>&#x1e0f;</td>
+						<td>d_</td>
+					</tr>
+					<tr>
+						<td>&#x015b;</td>
+						<td>s/</td>
+					</tr>
+					<tr>
+						<td>&#x0161;</td>
+						<td>s^</td>
+					</tr>
+				</tbody>
+			</table>
+		
+			<table>
+				<thead>
+					<tr>
+						<th>Letter</th>
+						<th>Combination</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>&#x1e63;</td>
+						<td>s.</td>
+					</tr>
+					<tr>
+						<td>&#x1e0d;</td>
+						<td>d.</td>
+					</tr>
+					<tr>
+						<td>&#x1e6d;</td>
+						<td>t.</td>
+					</tr>
+					<tr>
+						<td>&#x1e93;</td>
+						<td>z.</td>
+					</tr>
+					<tr>
+						<td>&#x02bf;</td>
+						<td>`</td>
+					</tr>
+					<tr>
+						<td>&#x0121;</td>
+						<td>g.</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<br style="clear:both" />
+		</div>
+		
+		<p>
+			Type: <select id="search_POS">
+				<option value="all">All</option>
+				<option value="proper name">Proper Name</option>
+				<option value="tribal name">Tribal Name</option>
+				<option value="verb">Verb</option>
+				<option value="noun">Noun</option>
+				<option value="deity">Deity</option>
+				<option value="adjective">Adjective</option>
+				<option value="preposition">Preposition</option>
+				<option value="other">Other</option>
+			</select>
+			<br />
+			Order: <select id="alphabet_order">
+				<option value="roman">Roman</option>
+				<option value="wehr" selected="selected">Wehr</option>
+			</select>
+			<br />
+			<input type="text" id="search_term" />
+		</p>
+
+		<table id="results">
+			<thead>
+				<tr>
+					<th>Lemma</th>
+					<th>Type</th>
+					<th>Definition</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<p id="no_results">
+			No results
+		</p>
+	</body>
+</html>
